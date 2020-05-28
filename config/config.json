@@ -1,0 +1,11 @@
+{
+  "development": {
+      "dialect": "mysql",
+      "port": 3306,
+      "host": "localhost",
+      "database": "bdcontrol",
+        "username": "suporte",
+      "password": "bibliaSG",
+      "logging": false
+  }
+}

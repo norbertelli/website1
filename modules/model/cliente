@@ -1,0 +1,60 @@
+'use strict'
+
+module.exports = (sequelize, DataTypes) => {
+
+    const Clientes = sequelize.define('Clientes', {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+            field: 'IdTbCliente'
+        },
+        Key: {
+            type: DataTypes.STRING,
+            field: 'ClienteKey'
+        },
+        Nome:    {
+            type: DataTypes.STRING,
+            field: 'NomeCliente'
+        },  
+        CPF:     {
+            type: DataTypes.STRING,
+            field:'CPFCliente'
+            },
+       
+        email:  {
+            type: DataTypes.STRING,
+            field:'emailCliente'
+            },
+        Celular:  {
+            type: DataTypes.STRING,
+            field:'celCliente'
+            },
+       Ativo: {
+            type: DataTypes.INTEGER,
+            field: 'ContaValida'
+        },
+       Senha:  {
+            type: DataTypes.STRING,
+            field:'Senha'
+            },
+ 
+  Linguagem:  {
+            type: DataTypes.STRING,
+            field:'Linguagem'
+            },
+  Pais:  {
+            type: DataTypes.STRING,
+            field:'Pais'
+            },
+
+    }, {
+        freezeTableName: true,
+        tableName: 'tbclientes',
+        timestamps: false
+    })
+
+    return Clientes
+}
+
+  
